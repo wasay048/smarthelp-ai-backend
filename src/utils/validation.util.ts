@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import { Request } from "express";
+import type { Express } from "express";
 type MulterFile = Express.Multer.File;
 
 export const validateUpload = (file: MulterFile): boolean => {
