@@ -1,7 +1,6 @@
 import bcrypt from "bcrypt";
 import { Request } from "express";
-import type { Express } from "express";
-type MulterFile = Express.Multer.File;
+import type { File as MulterFile } from "multer";
 
 export const validateUpload = (file: MulterFile): boolean => {
   const allowedTypes = ["application/pdf", "text/plain"];
