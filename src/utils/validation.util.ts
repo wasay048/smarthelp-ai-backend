@@ -1,8 +1,8 @@
 /// <reference types="multer" /
 import bcrypt from "bcrypt";
 import multer from "multer";
-// now alias the File interface on the multer namespace
-type MulterFile = multer.File;
+
+type MulterFile = Express.Multer.File;
 
 export const validateUpload = (file: MulterFile): boolean => {
   const allowedTypes = ["application/pdf", "text/plain"];
